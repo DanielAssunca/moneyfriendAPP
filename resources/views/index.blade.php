@@ -11,7 +11,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">SysAcomp</a>
+                <a class="navbar-brand" href="#">MoneyFrienD</a>
             </div>
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right">
@@ -34,7 +34,7 @@
                     <div class="col-sm-4 text-center">
                         <div class="panel panel-info">
                             <div class="panel-heading">
-                                <h3 class="panel-title">Total de Dividas Ativos</h3>
+                                <h3 class="panel-title">Total de Emprestimos Ativos</h3>
                             </div>
                             <div class="panel-body">
                                 <h3>10</h3>
@@ -44,7 +44,7 @@
                     <div class="col-sm-4 text-center">
                         <div class="panel panel-success">
                             <div class="panel-heading">
-                                <h3 class="panel-title">Acompanhamentos Realziados</h3>
+                                <h3 class="panel-title">Emprestimos Recebidos</h3>
                             </div>
                             <div class="panel-body">
                                 <h3>8</h3>
@@ -54,7 +54,7 @@
                     <div class="col-sm-4 text-center">
                         <div class="panel panel-danger">
                             <div class="panel-heading">
-                                <h3 class="panel-title">Acompanhamentos Pendentes</h3>
+                                <h3 class="panel-title">Emprestimos  Atrasados</h3>
                             </div>
                             <div class="panel-body">
                                 <h3>20%</h3>
@@ -66,7 +66,7 @@
                     <div class="col-md-6">
                         <div class="panel panel-primary">
                             <div class="panel-heading">
-                                <h3 class="panel-title">Ultimos Acompanhamentos Realziados</h3>
+                                <h3 class="panel-title">Ultimos Emprestimos  Realziados</h3>
                             </div>
                             <div class="panel-body">
                                 <table class="table table-hover">
@@ -118,7 +118,7 @@
                     <div class="col-md-6">
                         <div class="panel panel-warning">
                             <div class="panel-heading">
-                                <h3 class="panel-title">Acompanhamentos em Aberto</h3>
+                                <h3 class="panel-title">Emprestimos em Aberto</h3>
                             </div>
                             <div class="panel-body">
                                 <table class="table table-hover">

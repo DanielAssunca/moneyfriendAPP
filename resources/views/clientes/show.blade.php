@@ -26,8 +26,7 @@
                 <ul>
                     <li><a href="{{ route('index') }}">Home</a></li>
                     <li class="active"><a href="{{ route('clientes.index') }}">Clientes</a></li>
-                    <li class="active"><a href="{{ route('dividas.index') }}">Dividas</a></li>
-                    <li class="visible-xs"><a href="#">Sair</a></li>
+                   <li class="visible-xs"><a href="#">Sair</a></li>
                 </ul>
             </div>
             <div class="content">

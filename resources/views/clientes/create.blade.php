@@ -50,8 +50,8 @@
                                 {{ csrf_field() }}
 
                                 <div class="form-group">
-                                    <label for="nome">Nome Fantasia</label>
-                                    <input type="text" class="form-control" placeholder="Nome Fantasia" name="nome"
+                                    <label for="nome">Nome</label>
+                                    <input type="text" class="form-control" placeholder="Nome" name="nome"
                                         required>
                                 </div>
                                 <div class="row">
@@ -60,6 +60,13 @@
                                             <label for="email">E-mail</label>
                                             <input type="email" class="form-control" placeholder="e-mail" name="email"
                                                 required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="celular">Celular</label>
+                                            <input type="tel" class="form-control" placeholder="Celular"
+                                                required name="telefone">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -76,8 +83,8 @@
                                         <div class="form-group">
                                             <label for="tipocliente">Tipo de Cliente</label>
                                             <select class="form-control" name="tipocliente" required>
-                                                <option>Organizadora de Dividas</option>
-                                                <option>Propria Associação</option>
+                                                <option>Pessoa Fisica</option>
+                                                <option>Pessoa Juridica</option>
                                             </select>
                                         </div>
                                     </div>
@@ -125,18 +132,7 @@
                                 </div>
                                 <div class="row">
 
-                                    <div class="col-md-6">
-                                        <div class="form-group">
 
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text">Customizações:</span>
-                                                </div>
-                                                <textarea name="customizacoes"
-                                                    style="margin: 0px; width: 538px;height: 230px;"
-                                                    class="form-control" aria-label="With textarea"></textarea>
-                                            </div>
-                                        </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
@@ -146,7 +142,7 @@
                                                     <span class="input-group-text">Observações:</span>
                                                 </div>
                                                 <textarea name="observacoes"
-                                                    style="margin: 0px; width: 538px; height: 230px;"
+                                                    style="margin: 0px; width: 538px; height: 100px;"
                                                     class="form-control" aria-label="With textarea"></textarea>
                                             </div>
                                         </div>

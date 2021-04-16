@@ -10,7 +10,7 @@ class clientes extends Model
 {
     protected $fillable = ["id",
       "nome", "celular", "telefone", "email",
-      "rua",  "bairro", "numero",  "cep", "cidade", "observacao", "situacao","tipocliente"
+      "rua",  "bairro", "numero",  "cep", "cidade", "situacao","tipocliente"
     ];
     protected $table = "clientes";
 

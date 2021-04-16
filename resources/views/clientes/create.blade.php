@@ -2,6 +2,11 @@
 
 @section('content')
 
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="<?php echo asset('css/style.css'); ?>" type="text/css">
+
     <body>
         {{-- AQUI VAI SER CONSTRUIDO O MENU DA APLICAÇÃO!!! --}}
         <nav class="navbar navbar-inverse float-left">
@@ -39,7 +44,7 @@
                                 @endforeach
                             </div>
                         @endif
-                        <div   class="panel panel-default">
+                        <div class="panel panel-default">
 
                             <div class="panel-heading">
                                 <h3>Cadastro de Cliente</h3>
@@ -48,7 +53,7 @@
 
                             <div class="contet">
                                 <div class="col-md-12">
-                                    <div class="form-group">s
+                                    <div class="form-group">
 
                                         <div class="panel-body">
 
@@ -76,6 +81,8 @@
                                                             </div>
                                                         </div>
                                                     </div>
+
+
 
                                                 </div>
 
@@ -121,10 +128,10 @@
                                                                         id="rua" size="50" /></label><br />
                                                                 <label>Número:
                                                                     <input class="form-control" name="numero" type="text"
-                                                                        size="5" /></label><br />
+                                                                        size="3" /></label><br />
                                                                 <label>Bairro:
                                                                     <input class="form-control" name="bairro" type="text"
-                                                                        id="bairro" size="30" /></label><br />
+                                                                        id="bairro" size="20" /></label><br />
                                                                 <div class="input-group">
                                                                     <label>Cidade:
                                                                         <input class="form-control" name="cidade"
@@ -132,13 +139,28 @@
                                                                             size="20" /></label><br />
                                                                     <label>Estado:
                                                                         <input class="form-control" name="uf" type="text"
-                                                                            id="uf" size="20" /></label><br />
+                                                                            id="uf" size="2" /></label><br />
 
-                                                                    <label >IBGE:
+                                                                    <label>IBGE:
                                                                         <input class="form-control" name="ibge" type="text"
                                                                             id="ibge" size="8" /></label><br />
                                                                 </div>
 
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+
+                                                        <div class="col-md-2">
+                                                            <div>
+                                                                <label for="situacao">Situação</label>
+                                                                <select class="form-control" name="situacao" required>
+                                                                    <option style="color:blue;">Quite</option>
+                                                                    <option style="color:green;">Em dias</option>
+                                                                    <option style="color:red;">Devendo</option>
+                                                                    <option style="color:gray;">Bloqueado</option>
+                                                                </select>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -149,8 +171,8 @@
                                                     <div class="col-md-4">
                                                         <div class="form-group">
                                                             <a href="{{ url()->previous() }}"
-                                                                 class="btn btn-info">Voltar</a>
-                                                            <button  type="submit" class="btn btn-primary">Cadastrar</button>
+                                                                class="btn btn-info">Voltar</a>
+                                                            <button type="submit" class="btn btn-primary">Cadastrar</button>
                                                         </div>
 
                                                     </div>

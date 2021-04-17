@@ -116,37 +116,36 @@
 
                                                     <div class="col-md-5">
                                                         <div class="form-group">
+
+                                                            <label>Cep:
+                                                                <input class="form-control" name="cep" type="text" id="cep"
+                                                                    value="" size="5" maxlength="9"
+                                                                    onblur="pesquisacep(this.value);" />
+                                                            </label><br />
+
+                                                            <label>Rua:
+                                                                <input class="form-control" name="rua" type="text" id="rua"
+                                                                    size="50" /></label><br />
+                                                            <label>Número:
+                                                                <input class="form-control" name="numero" type="text"
+                                                                    size="3" /></label><br />
+                                                            <label>Bairro:
+                                                                <input class="form-control" name="bairro" type="text"
+                                                                    id="bairro" size="20" /></label><br />
                                                             <div class="input-group">
-                                                                <label>Cep:
-                                                                    <input class="form-control" name="cep" type="text"
-                                                                        id="cep" value="" size="5" maxlength="9"
-                                                                        onblur="pesquisacep(this.value);" />
-                                                                </label><br />
+                                                                <label>Cidade:
+                                                                    <input class="form-control" name="cidade" type="text"
+                                                                        id="cidade" size="20" /></label><br />
+                                                                <label>Estado:
+                                                                    <input class="form-control" name="uf" type="text"
+                                                                        id="uf" size="2" /></label><br />
 
-                                                                <label>Rua:
-                                                                    <input class="form-control" name="rua" type="text"
-                                                                        id="rua" size="50" /></label><br />
-                                                                <label>Número:
-                                                                    <input class="form-control" name="numero" type="text"
-                                                                        size="3" /></label><br />
-                                                                <label>Bairro:
-                                                                    <input class="form-control" name="bairro" type="text"
-                                                                        id="bairro" size="20" /></label><br />
-                                                                <div class="input-group">
-                                                                    <label>Cidade:
-                                                                        <input class="form-control" name="cidade"
-                                                                            type="text" id="cidade"
-                                                                            size="20" /></label><br />
-                                                                    <label>Estado:
-                                                                        <input class="form-control" name="uf" type="text"
-                                                                            id="uf" size="2" /></label><br />
-
-                                                                    <label>IBGE:
-                                                                        <input class="form-control" name="ibge" type="text"
-                                                                            id="ibge" size="8" /></label><br />
-                                                                </div>
-
+                                                                <label>IBGE:
+                                                                    <input class="form-control" name="ibge" type="text"
+                                                                        id="ibge" size="8" /></label><br />
                                                             </div>
+
+
                                                         </div>
                                                     </div>
 

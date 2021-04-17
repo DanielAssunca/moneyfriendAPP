@@ -14,15 +14,9 @@ class clientes extends Model
     ];
     protected $table = "clientes";
 
-    public function dividas(){
-        return $this->hasMany('App\dividas', 'clientes_id');
+    public function contasareceber(){
+        return $this->hasMany('App\contasareceber', 'clientes_id');
     }
-
-
-    public function acompanhamentos(){
-        return $this->hasMany('App\acompanhamentos', 'clientes_id');
-    }
-
 
 }
 

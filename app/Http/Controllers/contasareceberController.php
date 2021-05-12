@@ -7,7 +7,9 @@ use Illuminate\Http\Request;
 use Validator;
 use App\clientes;
 use App\contasareceber;
+use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\DB;
+
 use Illuminate\Pagination\Paginator;
 
 class contasareceberController extends Controller

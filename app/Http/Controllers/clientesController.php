@@ -2,23 +2,28 @@
 
 namespace App\Http\Controllers;
 
-
-use Illuminate\Http\Request;
-use Validator;
 use App\clientes;
 use App\dividas;
-use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Request;
 use Illuminate\Pagination\Paginator;
+use Illuminate\Support\Facades\DB;
+use Validator;
 
 class clientesController extends Controller
 {
+    public function boot()
+    {
+        Paginator::defaultView('pagination::view');
+
+        Paginator::defaultSimpleView('pagination::view');
+    }
 
     protected function validarclientes($request)
     {
         $validator = Validator::make($request->all(), [
             "nome" => "required",
             "email" => "required",
-            "telefone" => "required | numeric"
+            "telefone" => "required | numeric",
 
         ]);
         return $validator;
@@ -38,13 +43,13 @@ class clientesController extends Controller
     public function index(Request $request)
     {
         $qtd = $request['qtd'] ?: 5;
-        $page = $request['page'] ?: 1;
+        $page = $request['page'] ?: 3;
         $buscar = $request['buscar'];
         Paginator::currentPageResolver(function () use ($page) {
             return $page;
         });
         if ($buscar) {
-            $clientes = DB::table('clientes')->where('nome', 'ilike', '%'.$buscar.'%')->paginate($qtd);
+            $clientes = DB::table('clientes')->where('nome', 'ilike', '%' . $buscar . '%')->paginate($qtd);
         } else {
             $clientes = DB::table('clientes')->paginate($qtd);
         }
@@ -52,13 +57,11 @@ class clientesController extends Controller
         return view('clientes.index', compact('clientes'));
     }
 
-
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-
 
     /**
      * Store a newly created resource in storage.
@@ -122,7 +125,6 @@ class clientesController extends Controller
         return redirect()->route('clientes.index');
     }
 
-
     /**
      * Remove the specified resource from storage.
      *
@@ -131,21 +133,20 @@ class clientesController extends Controller
      */
     public function destroy($id)
     {
-        if(dividas::where('clientes_id', '=', $id)->count()){
+        if (dividas::where('clientes_id', '=', $id)->count()) {
             $msg = "Não é possível excluir este cliente. Os dividas com id ( ";
             $dividas = dividas::where('clientes_id', '=', $id)->get();
-            foreach($dividas as $divida){
-                $msg .= $divida->id." ";
+            foreach ($dividas as $divida) {
+                $msg .= $divida->id . " ";
             }
             $msg .= " ) estão relacionados com este cliente!";
 
-            \Session::flash('mensagem', ['msg'=>$msg]);
+            \Session::flash('mensagem', ['msg' => $msg]);
             return redirect()->route('clientes.remove', $id);
         }
         clientes::find($id)->delete();
         return redirect()->route('clientes.index');
     }
-
 
     public function remover($id)
     {

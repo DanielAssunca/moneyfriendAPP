@@ -58,7 +58,6 @@
                                     <thead>
                                         <tr>
                                             <th>Nome</th>
-                                            <th>Dividas</th>
                                             <th>Email</th>
                                             <th>Telefone</th>
                                             <th>Tipo de Cliente</th>
